@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rep Link & QR Generator</title>
+</head>
+<body>
+  <h1>VHDP Link & QR Code Generator</h1>
+  <form id="genForm">
+    <label>Rep name: <input type="text" id="nameInput" required></label><br>
+    <label>Rep phone: <input type="tel" id="phoneInput" required></label><br>
+    <button type="submit">Generate</button>
+  </form>
+  <p>Your link: <a id="repLink" href="#" target="_blank"></a></p>
+  <img id="qrImage" alt="QR Code" />
+
+  <script>
+    document.getElementById('genForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nameVal = encodeURIComponent(document.getElementById('nameInput').value.trim());
+      const phoneVal = encodeURIComponent(document.getElementById('phoneInput').value.trim());
+      const siteUrl = 'https://knightjames1998.github.io/VHDP/?name=' + nameVal + '&phone=' + phoneVal;
+
+      // show the personalised link
+      const linkEl = document.getElementById('repLink');
+      linkEl.href = siteUrl;
+      linkEl.textContent = siteUrl;
+
+      // generate QR code using external API
+      const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(siteUrl);
+      document.getElementById('qrImage').src = qrUrl;
+    });
+  </script>
+</body>
+</html>
