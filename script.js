@@ -313,4 +313,18 @@ if (whatBtn && whatModal && whatOkBtn) {
     // re-enable scroll after closing modal
     document.body.style.overflow = 'auto';
   });
+  (function () {
+  const params = new URLSearchParams(window.location.search);
+  const repName = params.get("name");
+  const repPhone = params.get("phone");
+
+  if (repName) {
+    document.getElementById("repName").textContent = decodeURIComponent(repName);
+  }
+  if (repPhone) {
+    document.getElementById("repPhone").textContent = decodeURIComponent(repPhone);
+  }
+})();
+
+
 }
