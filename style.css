@@ -358,9 +358,13 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #FF; /* very light gravy/ beige color */
+  /* very light gravy‑toned background */
+  background-color: #f8f4e8;
   color: #333;
-  text-align: center;         /* center the text */
+  /* centre the text within the banner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   font-size: 0.9rem;
   z-index: 10000;
