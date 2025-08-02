@@ -352,3 +352,17 @@ h1 {
   background: #d32f2f;
   color: #fff;
 }
+/* Credit banner at bottom of page */
+.credit-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f7f7f7; /* matches existing background */
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  z-index: 10000;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
