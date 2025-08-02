@@ -81,7 +81,7 @@
       linkEl.textContent = siteUrl;
 
       // generate QR code using external API
-      const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(siteUrl);
+      const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=' + encodeURIComponent(siteUrl);
       document.getElementById('qrImage').src = qrUrl;
     });
   </script>
