@@ -358,9 +358,9 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f7f7f7; /* matches existing background */
+  background-color: #f5f5dc; /* very light gravy/ beige color */
   color: #333;
-  text-align: center;
+  text-align: center;         /* center the text */
   padding: 10px;
   font-size: 0.9rem;
   z-index: 10000;
