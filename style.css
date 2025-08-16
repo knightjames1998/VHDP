@@ -354,9 +354,6 @@ h1 {
 }
 /* Credit banner at bottom of page */
 .credit-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   /* very light gravy‑toned background */
   background-color: #f8f4e8;
@@ -368,11 +365,7 @@ h1 {
   text-align: center;
   padding: 6px;
   font-size: 0.65rem;
-  z-index: 10000;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
 }
 /* Ensure content isn’t hidden behind the fixed credit banner */
-body {
-  padding-bottom: 80px; /* Adjust if your banner height changes */
-}
 
